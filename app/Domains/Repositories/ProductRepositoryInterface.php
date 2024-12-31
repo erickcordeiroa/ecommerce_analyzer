@@ -3,9 +3,8 @@
 namespace App\Domains\Repositories;
 
 use App\Domains\Entities\Product;
-use stdClass;
 
-class ProductRepository
+class ProductRepositoryInterface
 {
     public function create(Product $data): void;
 }

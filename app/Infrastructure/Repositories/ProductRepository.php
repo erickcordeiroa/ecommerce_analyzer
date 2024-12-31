@@ -4,7 +4,7 @@ namespace App\Infrastructure\Repositories;
 
 use App\Domains\Entities\Product;
 use App\Infrastructure\Models\Product as ProductModel;
-use App\Domains\Repositories\ProductRepository as ProductRepositoryInterface;
+use App\Domains\Repositories\ProductRepositoryInterface;
 use Exception;
 use stdClass;
 
