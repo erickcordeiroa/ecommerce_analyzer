@@ -4,7 +4,7 @@ namespace App\Domains\Repositories;
 
 use App\Domains\Entities\Product;
 
-class ProductRepositoryInterface
+interface ProductRepositoryInterface
 {
-    public function create(Product $data): void;
+    public function create(Product $data): Product;
 }

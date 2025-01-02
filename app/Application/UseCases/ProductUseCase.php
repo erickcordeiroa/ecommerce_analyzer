@@ -2,17 +2,17 @@
 
 namespace App\Application\UseCases;
 
-use App\Domains\Entities\Product as EntitiesProduct;
+use App\Domains\Entities\Product;
 use App\Domains\Repositories\ProductRepositoryInterface;
 
-class Product
+class ProductUseCase
 {
     public function __construct(
        private readonly ProductRepositoryInterface $productRepository
     ) {}
 
 
-    public function create(EntitiesProduct $data): void
+    public function create(Product $data): Product
     {
         return $this->productRepository->create($data);
     }

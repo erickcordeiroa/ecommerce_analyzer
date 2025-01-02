@@ -4,6 +4,7 @@ namespace App\Domains\Entities;
 
 class Product
 {
+    private int $id;
     private ?string $description;
     private ?string $imageUrl;
 
@@ -12,6 +13,17 @@ class Product
         private readonly string $price,
         private readonly string $productUrl,
     ) {
+    }
+
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    public function setId(int $id): self
+    {
+        $this->id = $id;
+        return $this;
     }
 
     public function getTitle(): string
@@ -29,23 +41,23 @@ class Product
         return $this->productUrl;
     }
 
-    public function getImageUrl(): string
+    public function getImageUrl(): ?string
     {
         return $this->imageUrl;
     }
 
-    public function getDescription(): string
+    public function getDescription(): ?string
     {
         return $this->description;
     }
 
-    public function setImageUrl(string $imageUrl): self
+    public function setImageUrl(?string $imageUrl): self
     {
         $this->imageUrl = $imageUrl;
         return $this;
     }
 
-    public function setDescription(string $description): self
+    public function setDescription(?string $description): self
     {
         $this->description = $description;
         return $this;
@@ -56,9 +68,9 @@ class Product
         return [
             'title' => $this->getTitle(),
             'price' => $this->getPrice(),
-            'productUrl' => $this->getProductUrl(),
-            'imageUrl' => $this->getImageUrl(),
-            'description' => $this->getDescription(),
+            'product_url' => $this->getProductUrl(),
+            'image_url' => $this->getImageUrl() ?? null,
+            'description' => $this->getDescription() ?? null,
         ];
     }
 
