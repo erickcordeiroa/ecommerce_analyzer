@@ -12,7 +12,7 @@ class ProductUseCase
     ) {}
 
 
-    public function create(Product $data): Product
+    public function execute(Product $data): Product
     {
         return $this->productRepository->create($data);
     }
