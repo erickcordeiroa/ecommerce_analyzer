@@ -5,9 +5,7 @@ namespace App\Infrastructure\Http\Controllers;
 use App\Application\UseCases\ProductUseCase;
 use App\Infrastructure\Request\ProductRequest;
 use App\Infrastructure\Resource\ProductResource;
-use Illuminate\Http\Request;
 use App\Infrastructure\Mappers\ProductMapper;
-use Illuminate\Support\Facades\Validator;
 use Symfony\Component\HttpFoundation\Response;
 
 class ProductController extends Controller
